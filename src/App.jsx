@@ -9,12 +9,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data from the backend
-    axios.get(`${server}/read`, {
-      headers: {
-          "Content-Type": "application/json"
-      },
-      withCredentials: true,
-  })
+    axios.get(`${server}/read`)
       .then(response => {
         console.log(response.data)
         setRsvp(response.data.rsvp)

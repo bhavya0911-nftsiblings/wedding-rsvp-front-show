@@ -1,40 +1,90 @@
-styles.css
-
+/* Overall styling */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Add any additional styles as needed */
+  font-family: 'Roboto', sans-serif;
+  background-color: #ECEFF1; /* Material Design background color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div {
+  background-color: #fff;
+  padding: 24px;
+  margin: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Material Design shadow */
+  border-radius: 4px; /* Material Design border radius */
+  width: 80%;
+  max-width: 600px;
+}
+
+h2 {
+  font-size: 32px; /* Larger size for main title */
+  color: #333;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 400; /* Material Design font weight for titles */
+}
+
+h3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-weight: 300; /* Lighter weight for sub-titles */
+  border-bottom: 2px solid #EEEEEE; /* Subtle separator for list titles */
+  padding-bottom: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #EEEEEE; /* Material Design list divider */
+  font-size: 16px;
+  color: #757575; /* Material Design text color */
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #F5F5F5; /* Material Design list item hover color */
+}
+
+/* Differentiate between RSVP - YES and RSVP - NO */
+ul:first-of-type li {
+  background-color: #E8F5E9; /* Light green background for 'YES' RSVP */
+}
+
+ul:last-of-type li {
+  background-color: #FFEBEE; /* Light red background for 'NO' RSVP */
+}
+
+ul:first-of-type li:last-child {
+  border-bottom: 2px solid #BDBDBD; /* Stronger divider between lists */
+}
+
+/* Scrollable list styling */
+ul {
+  max-height: 200px; /* Set a max-height for scrollable list */
+  overflow-y: auto; /* Enable scrolling */
+  margin-bottom: 16px; /* Spacing after each list */
+}
+
+/* Scrollbar styling for Webkit browsers */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+}
